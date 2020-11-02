@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemy;
     float randX;
     Vector2 whereToSpawn;
-    private float spawnRate = 2f;
+    private float spawnRate = 6f;
     float nextSpawn = 0.0f;
 
     void Start()
