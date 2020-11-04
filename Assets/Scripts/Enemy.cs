@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+#if UNITY_EDITOR
+
 using UnityEngine;
 
+#endif
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update

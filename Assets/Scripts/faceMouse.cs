@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+#if UNITY_EDITOR
+
 using UnityEngine;
+
+#endif
 
 public class faceMouse : MonoBehaviour
 {

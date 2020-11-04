@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
+#if UNITY_EDITOR
+
 using UnityEngine;
+
+#endif
 
 public class projectile : MonoBehaviour
 {

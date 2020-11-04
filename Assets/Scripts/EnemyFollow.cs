@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Runtime;
 using System.Security.Cryptography;
+#if UNITY_EDITOR
+
 using UnityEngine;
+
+#endif
 
 public class EnemyFollow : MonoBehaviour
 {
