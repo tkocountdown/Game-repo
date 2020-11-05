@@ -13,6 +13,7 @@ public class EnemyFollow : MonoBehaviour
     // Start is called before the first frame update
     private float speed = 1;
     private Transform target;
+    public GameObject enemy;
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 

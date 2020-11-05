@@ -32,6 +32,7 @@ public class projectile : MonoBehaviour
             
             Destroy(collision.gameObject);
             Destroy(Projectile);
+            PlayerScript.projcounter--;
             
             GameManager.playGame = true;
         }
@@ -39,6 +40,7 @@ public class projectile : MonoBehaviour
         {
             
             Destroy(Projectile);
+            PlayerScript.projcounter--;
         }
        
        

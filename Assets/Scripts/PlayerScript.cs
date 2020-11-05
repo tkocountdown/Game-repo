@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject Player;
     public GameObject projectile;
     public GameObject projectileClone;
-    private int projcounter = 0;
+    public static int projcounter = 0;
     
     void Start()
     {
@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
     }
     void fireProjectile()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& projcounter < 4)
+        if (Input.GetKeyDown(KeyCode.Space)&& projcounter < 1)
         {
             projectileClone = Instantiate(projectile, new Vector3(Player.transform.position.x, Player.transform.position.y , 0), Player.transform.rotation) as GameObject;
             projcounter++;
