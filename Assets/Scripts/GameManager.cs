@@ -1,11 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
-#if UNITY_EDITOR
-
 using UnityEngine;
-
-#endif
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour

@@ -2,18 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-#if UNITY_EDITOR
+
 
 using UnityEngine;
 
-#endif
 
 public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject enemy;
     float randX;
-    Vector2 whereToSpawn;
+    Vector3 whereToSpawn;
     private float spawnRate = 6f;
     float nextSpawn = 0.0f;
 
@@ -29,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         {
             nextSpawn = Time.time + spawnRate;
             randX = UnityEngine.Random.Range(-6f, 6f);
-            whereToSpawn = new Vector2(randX, transform.position.y);
+            whereToSpawn = new Vector3(randX, transform.position.y);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
         }
     }

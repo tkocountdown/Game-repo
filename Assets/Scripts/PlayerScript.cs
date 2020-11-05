@@ -4,11 +4,11 @@ using System.Collections.Specialized;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
-#if UNITY_EDITOR
+
 
 using UnityEngine;
 
-#endif
+
 public class PlayerScript : MonoBehaviour
 {
     // Start is called before the first frame update
