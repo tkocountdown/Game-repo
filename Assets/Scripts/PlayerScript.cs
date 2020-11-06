@@ -16,10 +16,11 @@ public class PlayerScript : MonoBehaviour
     public GameObject projectile;
     public GameObject projectileClone;
     public static int projcounter = 0;
-    
+    Vector3 respawn = new Vector3(-6, -3, 0);
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -56,10 +57,21 @@ public class PlayerScript : MonoBehaviour
     }
     void fireProjectile()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& projcounter < 1)
+        if (Input.GetKeyDown(KeyCode.Space) && projcounter < 1)
         {
-            projectileClone = Instantiate(projectile, new Vector3(Player.transform.position.x, Player.transform.position.y , 0), Player.transform.rotation) as GameObject;
+            projectileClone = Instantiate(projectile, new Vector3(Player.transform.position.x, Player.transform.position.y, 0), Player.transform.rotation) as GameObject;
             projcounter++;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+
+            Destroy(collision.gameObject);
+            Player.transform.position = respawn;
+            GameManager.lives--;
+            GameManager.playGame = false;
         }
     }
 }

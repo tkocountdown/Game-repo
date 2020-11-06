@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static int lives = 3;
+    public static int lives = 2;
     public static bool playGame = true;
     public Text livesText;
     public Text endScrene;
@@ -23,10 +23,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        livesText.text = "Lives" + lives;
+        livesText.text = "Lives:" + lives;
         if (lives == 0)
         {
             endScrene.text = " You Lose";
+            playGame = false;
         }
         timer += Time.deltaTime;
         if (timer > timeToMove)
@@ -36,9 +37,13 @@ public class GameManager : MonoBehaviour
             moveCounter++;
 
         }
-        if (lives==3 && moveCounter == 20)
+        if (moveCounter > 40 && moveCounter<60)
         {
-            lives++;
+            EnemySpawner.spawnRate = 1f;
+        }
+        else if(moveCounter>60)
+        {
+            EnemySpawner.spawnRate = 50f;
         }
     }
 }
