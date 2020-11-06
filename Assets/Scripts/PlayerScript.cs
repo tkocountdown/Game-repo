@@ -61,6 +61,7 @@ public class PlayerScript : MonoBehaviour
         {
             projectileClone = Instantiate(projectile, new Vector3(Player.transform.position.x, Player.transform.position.y, 0), Player.transform.rotation) as GameObject;
             projcounter++;
+            //GameManager.shotcount--;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

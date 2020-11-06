@@ -11,7 +11,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 1;
+    public static float speed = 1;
     private Transform target;
     public GameObject enemy;
     void Start()
