@@ -35,8 +35,7 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
-                Instantiate(enemy, whereToSpawn, Quaternion.identity);
-                Instantiate(enemy, whereToSpawn, Quaternion.identity);
+                
 
 
             }

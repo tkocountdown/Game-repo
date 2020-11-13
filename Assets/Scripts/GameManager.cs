@@ -50,12 +50,22 @@ public class GameManager : MonoBehaviour
         
         if (moveCounter > 40 && moveCounter<60)
         {
-            EnemySpawner.spawnRate = 5f;
+            EnemySpawner.spawnRate = 8f;
             EnemyFollow.speed = 2;
         }
-        else if(moveCounter>60)
+        else if(moveCounter > 60 && moveCounter < 100)
         {
-            EnemySpawner.spawnRate = 1f;
+            EnemySpawner.spawnRate = 6f;
+            EnemyFollow.speed = 3;
+        }
+        else if (moveCounter > 100 && moveCounter < 180)
+        {
+            EnemySpawner.spawnRate = 4f;
+            EnemyFollow.speed = 4;
+        }
+        else if (moveCounter > 320)
+        {
+            EnemySpawner.spawnRate = 2f;
             EnemyFollow.speed = 5;
         }
     }
