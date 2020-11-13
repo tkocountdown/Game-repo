@@ -11,10 +11,13 @@ public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject enemy;
+    public GameObject enemyHard;
     float randX;
     Vector3 whereToSpawn;
     public static float spawnRate = 5f;
+    public static float hardSpawnRate = 300f;
     float nextSpawn = 0.0f;
+    float hardNextSpawn = 0.0f;
     
     void Start()
     {
@@ -36,6 +39,17 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
                 
+
+
+            }
+            if (Time.time > hardNextSpawn)
+            {
+                hardNextSpawn = Time.time + hardSpawnRate;
+                randX = UnityEngine.Random.Range(-6f, 6f);
+                whereToSpawn = new Vector3(randX, transform.position.y);
+                Instantiate(enemyHard, whereToSpawn, Quaternion.identity);
+                
+
 
 
             }
