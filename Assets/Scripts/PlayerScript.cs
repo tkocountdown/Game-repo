@@ -61,6 +61,7 @@ public class PlayerScript : MonoBehaviour
         {
             projectileClone = Instantiate(projectile, new Vector3(Player.transform.position.x, Player.transform.position.y, 0), Player.transform.rotation) as GameObject;
             projcounter++;
+            Sound.PlaySound("shoot");
             //GameManager.shotcount--;
         }
     }
@@ -72,6 +73,7 @@ public class PlayerScript : MonoBehaviour
             Destroy(collision.gameObject);
             Player.transform.position = respawn;
             GameManager.lives--;
+            Sound.PlaySound("hit");
             GameManager.playGame = false;
         }
     }
