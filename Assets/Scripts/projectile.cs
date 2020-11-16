@@ -33,7 +33,7 @@ public class projectile : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(Projectile);
             PlayerScript.projcounter--;
-            
+            Sound.PlaySound("hit");
             GameManager.playGame = true;
         }
         if (collision.gameObject.tag == "Finish")

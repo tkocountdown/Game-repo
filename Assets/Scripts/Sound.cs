@@ -5,13 +5,15 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static AudioClip deathSound, hitSound, shootSound;
+    public static AudioClip deathSound, hitSound, shootSound, difSound, levelSound;
     static AudioSource audioSrc;
     void Start()
     {
         deathSound = Resources.Load<AudioClip>("death");
         hitSound = Resources.Load<AudioClip>("hit");
         shootSound = Resources.Load<AudioClip>("shoot");
+        difSound = Resources.Load<AudioClip>("dif");
+        levelSound = Resources.Load<AudioClip>("level");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -32,6 +34,12 @@ public class Sound : MonoBehaviour
                 break;
             case ("shoot"):
                 audioSrc.PlayOneShot(shootSound);
+                break;
+            case ("dif"):
+                audioSrc.PlayOneShot(difSound);
+                break;
+            case ("level"):
+                audioSrc.PlayOneShot(levelSound);
                 break;
 
         }

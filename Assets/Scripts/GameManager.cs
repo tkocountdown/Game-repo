@@ -50,20 +50,20 @@ public class GameManager : MonoBehaviour
         }
         if (moveCounter == 40)
         {
-            Sound.PlaySound("death");
+            Sound.PlaySound("dif");
         }
         else if (moveCounter == 60)
         {
-            Sound.PlaySound("death");
+            Sound.PlaySound("dif");
         }
         else if (moveCounter == 100)
         {
-            Sound.PlaySound("death");
+            Sound.PlaySound("dif");
 
         }
         else if(moveCounter == 320)
         {
-            Sound.PlaySound("death");
+            Sound.PlaySound("dif");
         }
                
         if (moveCounter > 40 && moveCounter<60)

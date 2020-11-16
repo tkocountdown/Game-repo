@@ -73,7 +73,7 @@ public class PlayerScript : MonoBehaviour
             Destroy(collision.gameObject);
             Player.transform.position = respawn;
             GameManager.lives--;
-            Sound.PlaySound("hit");
+            Sound.PlaySound("death");
             GameManager.playGame = false;
         }
     }
